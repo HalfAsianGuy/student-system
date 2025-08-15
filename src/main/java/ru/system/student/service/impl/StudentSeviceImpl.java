@@ -7,14 +7,14 @@ import ru.system.student.service.StudentService;
 
 import java.time.LocalDate;
 
-import static ru.system.student.database.Database.FACULTIES;
 import static ru.system.student.database.Database.STUDENTS;
 
 public class StudentSeviceImpl implements StudentService {
 
     @Override
     public String getStudent(String seria, String number) {
-        Passport passport = STUDENTS.keySet()
+        Passport passport = STUDENTS
+                .keySet()
                 .stream()
                 .filter(student -> student.getSeria().equals(seria) && student.getNumber().equals(number))
                 .findFirst()

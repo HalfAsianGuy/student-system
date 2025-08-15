@@ -39,7 +39,7 @@ public class StudentController {
                 .filter(facValue -> facValue.getName().equals(saveStudentDTO.getFacultyName()))
                 .findFirst()
                 .orElse(null);
-        if (faculty == null) {
+        if (faculty != null) {
             return studentService.saveStudent(saveStudentDTO.getName(), saveStudentDTO.getLastName(),
                     saveStudentDTO.getSeria(), saveStudentDTO.getNumber(), saveStudentDTO.getBirthDate(),
                     saveStudentDTO.getBirthPlace(), faculty, saveStudentDTO.getPhoneNumber(),

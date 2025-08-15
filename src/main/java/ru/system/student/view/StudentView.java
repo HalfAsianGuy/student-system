@@ -72,7 +72,7 @@ public class StudentView {
         scanner = new Scanner(System.in);
         String name = scanner.nextLine();
 
-        System.out.println("Введите фимилию:");
+        System.out.println("Введите фамилию:");
         scanner = new Scanner(System.in);
         String lastName = scanner.nextLine();
 
